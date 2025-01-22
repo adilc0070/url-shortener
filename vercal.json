@@ -6,6 +6,6 @@
       }
     ],
     "env": {
-      "MONGODB_URI": "mongodb+srv://adilc0070:H@beeba123@cluster0.iitpy22.mongodb.net/"
+      "MONGODB_URI": "mongodb+srv://adilc0070:Habeeba123@cluster0.iitpy22.mongodb.net/urls-db?retryWrites=true&w=majority"
     }
   }
