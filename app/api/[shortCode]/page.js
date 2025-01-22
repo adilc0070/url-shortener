@@ -1,7 +1,7 @@
 // app/[shortCode]/page.js
 import { redirect } from 'next/navigation';
-import dbConnect from '../../utils/mongodb';
-import Url from '../../models/Url';
+import dbConnect from '../../../utils/mongodb';
+import Url from '../../../models/Url';
 
 export default async function ShortCodePage({ params }) {
   const { shortCode } = params;
