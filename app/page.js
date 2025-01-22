@@ -45,7 +45,7 @@ export default function Home() {
               <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                 <h1 className="text-3xl font-bold text-center mb-8">URL Shortener</h1>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <input
+                  <input 
                     type="url"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
