@@ -1,0 +1,11 @@
+{
+    "builds": [
+      {
+        "src": "next.config.js",
+        "use": "@vercel/next"
+      }
+    ],
+    "env": {
+      "MONGODB_URI": "mongodb+srv://adilc0070:H@beeba123@cluster0.iitpy22.mongodb.net/"
+    }
+  }
