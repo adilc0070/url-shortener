@@ -65,18 +65,36 @@ export default function Home() {
                   <p className="text-red-500 text-center">{error}</p>
                 )}
                 {shortUrl && (
-                  <div className="mt-4 p-4 bg-gray-50 rounded-md">
-                    <p className="text-center">Your shortened URL:</p>
-                    <a
-                      href={shortUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-600 break-all"
-                    >
-                      {shortUrl}
-                    </a>
-                  </div>
-                )}
+  <div className="mt-4 p-4 bg-gray-50 rounded-md">
+    <p className="text-center">Your shortened URL:</p>
+    <div className="flex items-center gap-2 mt-2">
+      <input 
+        type="text" 
+        value={shortUrl}
+        readOnly
+        className="w-full px-4 py-2 border rounded-md bg-white"
+      />
+      <button
+        onClick={() => {
+          navigator.clipboard.writeText(shortUrl);
+          alert('URL copied!');
+        }}
+        className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+      >
+        Copy
+      </button>
+    </div>
+    <a
+      href={shortUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-500 hover:text-blue-600 block mt-2 text-center"
+    >
+      Open URL
+    </a>
+  </div>
+)}
+                
               </div>
             </div>
           </div>
