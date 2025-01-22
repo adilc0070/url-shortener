@@ -5,11 +5,12 @@ import Url from '../../../models/Url';
 
 export async function GET(request, { params }) {
   const { shortCode } = params;
-  
+  console.log('shortCode', shortCode);
   await dbConnect();
   const url = await Url.findOne({ shortCode });
   
   if (!url) {
+    console.log('URL not found');
     return NextResponse.json({ error: 'URL not found' }, { status: 404 });
   }
   
