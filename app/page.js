@@ -88,7 +88,7 @@ export default function Home() {
       href={shortUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-500 hover:text-blue-600 block mt-2 text-center"
+      className="text-blue-500 hover:text-blue-600 block mt-2 text-center" 
     >
       Open URL
     </a>
