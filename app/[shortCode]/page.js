@@ -5,7 +5,7 @@ import ActionButtons from '@/components/ActionButtons';
 import UrlContent from '@/components/UrlContent';
 
 export default async function ShortCodePage({ params }) {
-  const { shortCode } = params;
+  const { shortCode } =await params;
   await dbConnect();
 
   const urlEntry = await Url.findOne({ shortCode });
