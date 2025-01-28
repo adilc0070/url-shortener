@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# URLSpin
+
+![URLSpin Banner](https://github.com/adilc0070/url-shortener/blob/main/app/favicon.ico)
+
+## Overview
+
+**URLSpin** is a modern web application built using **Next.js** and **MongoDB**. It allows users to shorten long URLs into compact, shareable links and manage them with analytics and customization options.
+
+## Features
+
+- **Quick URL Shortening**: Shorten long URLs into concise links instantly.
+- **Custom Links**: Create personalized short links for branding.
+- **Analytics Dashboard**: Track clicks, geographic data, and other stats for each link.
+- **URL Management**: Edit or delete your shortened links easily.
+- **API Access**: Integrate shortening functionality into your own applications.
+- **Mobile-Friendly**: Fully responsive design for all devices.
+- **Secure and Reliable**: Prioritizes user data protection and service uptime.
+
+## Tech Stack
+
+- **Frontend**: Next.js
+- **Backend**: Node.js (via Next.js API routes)
+- **Database**: MongoDB
+- **Styling**: Tailwind CSS
+- **Hosting**: [Your Hosting Platform, e.g., Vercel or AWS]
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Ensure you have the following installed:
+
+- Node.js (v16 or higher)
+- MongoDB (local or cloud instance)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/adilc0070/url-shortener.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd url-shortener
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Set up environment variables:
+   Create a `.env` file in the root directory with the following keys:
+   ```env
+   MONGODB_URI=your-mongodb-uri
+   ```
+
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+6. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+## API Endpoints
+
+### 1. **Shorten URL**
+   - **POST** `/api/shorten`
+   - **Request Body:**
+     ```json
+     {
+       "originalUrl": "https://example.com"
+     }
+     ```
+   - **Response:**
+     ```json
+     {
+       "shortCode": "eBUXJg",
+       "shortUrl": "http://localhost:3000/eBUXJg"
+     }
+     ```
+
+### 2. **Redirect to Original URL**
+   - **GET** `/:shortCode`
+   - Redirects to the original URL.
+
+## Folder Structure
+
+```
+url-shortener/
+├── app/
+│   ├── api/
+│   │   └── shorten/
+│   │       └── route.js
+│   ├── [shortCode]/
+│   │   └── page.js
+│   ├── features/
+│   │   └── page.js
+│   ├── privacy/
+│   │   └── page.js
+│   ├── terms/
+│   │   └── page.js
+│   └── page.js
+├── components/
+│   ├── ActionButtons.js
+│   ├── Footer.js
+│   ├── Header.js
+│   └── UrlContent.js
+├── models/
+│   ├── Url.js
+├── utils/
+│   ├── generateShortCode.js
+│   └── mongodb.js
+└── public/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Roadmap
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- [ ] Add user authentication
+- [ ] Enable link expiration feature
+- [ ] Provide advanced analytics
+- [ ] Implement dark mode
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
 
-## Learn More
+Contributions are welcome! Please follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Create a pull request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you have any questions or feedback, feel free to reach out:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: adilc0070@gmail.com
+- **GitHub**: [adilc0070](https://github.com/adilc0070)
+- **Website**: [adilc0070.site](https://adilc0070.site)
+
+---
+
+Thank you for using **URLSpin**! 🎉
+
