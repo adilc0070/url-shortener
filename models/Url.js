@@ -1,4 +1,3 @@
-// First, let's create the MongoDB schema (models/Url.js)
 import mongoose from 'mongoose';
 
 const urlSchema = new mongoose.Schema({
