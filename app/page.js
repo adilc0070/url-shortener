@@ -65,6 +65,7 @@ export default function Home() {
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 flex flex-col">
+      
       {/* Main Content */}
       <main className="flex-grow">
         <div className="max-w-6xl mx-auto px-4 py-12">
@@ -139,8 +140,6 @@ export default function Home() {
                     </button>
                     <a
                       href={shortUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-200 flex items-center gap-2"
                     >
                       <ExternalLink className="w-5 h-5" />
