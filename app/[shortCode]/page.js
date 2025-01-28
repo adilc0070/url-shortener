@@ -5,6 +5,7 @@ export default async function ShortCodePage({ params }) {
   console.log('params', params?.url?.pathname);
   
     const { shortCode } = params;
+    
 
   await dbConnect();
 
