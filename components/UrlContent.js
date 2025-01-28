@@ -23,10 +23,10 @@ export default function UrlContent({ url }) {
   return (
     <div className="flex-1">
       {iframeError ? (
-        <div className="h-[calc(100vh-68px)] flex items-center justify-center bg-gray-50">
-          <div className="max-w-2xl p-8 bg-white rounded-lg shadow-md text-center">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Cannot Display Content Directly
+        <div className="h-[calc(100vh-68px)] flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50">
+          <div className="max-w-2xl p-8 bg-white rounded-lg shadow-xl text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              Unable to Display Content
             </h2>
             <p className="text-gray-600 mb-6">
               This website cannot be displayed in an embedded view due to security restrictions.
@@ -37,13 +37,13 @@ export default function UrlContent({ url }) {
                 href={url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="block w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                className="block w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105"
               >
                 Open Website Directly
               </a>
               <button
                 onClick={handleCopy}
-                className="block w-full px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                className="block w-full px-6 py-3 bg-gradient-to-r from-gray-500 to-gray-700 text-white rounded-lg hover:from-gray-600 hover:to-gray-800 transition-all transform hover:scale-105"
               >
                 Copy URL to Clipboard
               </button>

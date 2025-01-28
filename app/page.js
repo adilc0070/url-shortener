@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { Link, ArrowRight, Copy, ExternalLink, Scissors, Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Link, ArrowRight, Copy, ExternalLink, Scissors, Github, Twitter, Linkedin, Mail, Instagram, Globe } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
@@ -64,20 +64,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex flex-col">
-      {/* Header with Logo */}
-      <header className="w-full bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-          <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
-            <span className="text-2xl font-bold text-gray-900">URLSnip</span>
-          </div>
-          <nav className="items-center space-x-6">
-            <p className='text-sm text-black'>Built by <a href="https://adilc0070.site" className="text-gray-600 hover:text-blue-500 transition-colors">adilc0070.site</a></p> 
-          </nav>
-        </div>
-      </header>
-
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 flex flex-col">
       {/* Main Content */}
       <main className="flex-grow">
         <div className="max-w-6xl mx-auto px-4 py-12">
@@ -197,71 +184,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300">
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Logo and Description */}
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <Image src="/favicon.ico" alt="Logo" width={24} height={24} />
-                <span className="text-xl font-bold text-white">URLSnip</span>
-              </div>
-              <p className="text-gray-400 mb-4">
-                Making the web more accessible, one shortened URL at a time. 
-                URLSnip provides fast, reliable, and secure URL shortening services.
-              </p>
-              <div className="flex space-x-4">
-                <a href="https://github.com/adilc0070" className="text-gray-400 hover:text-white transition-colors">
-                  <Github className="w-5 h-5" />
-                </a>
-                <a href="http://linkedin.com/in/adilc0070" className="text-gray-400 hover:text-white transition-colors">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="mailto:adilc0070@gmail.com" className="text-gray-400 hover:text-white transition-colors">
-                  <Mail className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Features</a></li>
-                <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4" />
-                  <span>contact@urlsnip.com</span>
-                </li>
-                <li>123 Web Street</li>
-                <li>Internet City, ON 10101</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p>&copy; 2025 URLSnip. All rights reserved.</p>
-              <div className="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
