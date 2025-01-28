@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "URL Shortener",
-  description: "URL Shortener created with Next.js and MongoDB by adilc0070.site",
+  title: "URLSnip",
+  description: "URLSnip provides fast, reliable, and secure URL shortening services created by adilc0070.site",
 };
 
 export default function RootLayout({ children }) {
